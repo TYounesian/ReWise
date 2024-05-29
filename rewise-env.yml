@@ -1,0 +1,21 @@
+name: rewise
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - pip
+  - python=3.8
+  - pytorch==1.12.1
+  - cudatoolkit=11.3
+  - torchaudio==0.12.1
+  - torchvision==0.13.1
+  - pip:
+    - torchsummary
+    - pandas
+    - scikit-learn
+    - transformers
+    - toml
+    - fire
+    - wandb==0.13.11
+prefix: /var/scratch/tyo201/anaconda/envs/rewise
