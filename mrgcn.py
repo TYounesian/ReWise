@@ -90,6 +90,17 @@ class MRGCN_Batch(nn.Module):
                 A_en_sliced, after_nodes_list, rels_more = full_mini_sampler(batch_id, self.num_nodes,
                                                                   int((self.num_rels - 1) / 2),
                                                                   self.horizontal_en_A_tr, self.depth, device)
+            elif self.sampler == 'grapes':
+                A_en_sliced, after_nodes_list, idx_per_rel_list, nonzero_rel_list, rels_more = grapes_sampler(
+                    batch_id,
+                    self.samp_num_list,
+                    self.num_nodes,
+                    self.num_rels,
+                    self.norel_A_tr,
+                    self.horizontal_en_A_tr,
+                    self.depth,
+                    self.sampler,
+                    device)
             elif self.sampler == 'LDUN':
                 A_en_sliced, after_nodes_list, idx_per_rel_list, nonzero_rel_list, rels_more = ladies_norel_sampler(batch_id,
                                                                                                          self.samp_num_list,

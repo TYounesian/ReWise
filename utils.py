@@ -526,6 +526,11 @@ def fastgcn_plus_sampler(batch_idx, samp_num_list, num_nodes, num_rels, A_en, de
     return A_en_sliced, after_nodes_list, 0
 
 
+def grapes_sampler(batch_idx, samp_num_list, num_nodes, num_rels, A_en, depth, sampler, device):
+
+    return A_en_sliced, after_nodes_list, idx_per_rel_list, non_zero_rel_list, rels_more
+
+
 def ladies_sampler(batch_idx, samp_num_list, num_nodes, num_rels, A_en, depth, sampler, device):
     previous_nodes = batch_idx
     col_ind = []
