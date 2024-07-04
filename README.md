@@ -1,6 +1,6 @@
 # ReWise #
 
-This is the official implementation of "ReWise: A Relation-Wise Sampling Framework for Relational Graph Convolutional Networks". This paper is under submission for SEMANTICS 2024. 
+This is the official implementation of "ReWise: A Relation-Wise Sampling Framework for Relational Graph Convolutional Networks." This paper was accepted for SEMANTICS 2024. 
 
 ## Instructions ##
 ## 1. Install dependencies ##
